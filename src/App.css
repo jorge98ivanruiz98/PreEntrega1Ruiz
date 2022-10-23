@@ -1,11 +1,10 @@
 .nav {
-  background-color: #0e9fff;
+  background-color: #37465B;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: 1rem;
   margin-top: 15px;
 }
 
@@ -27,7 +26,7 @@
 .nav li.active a {
   color: #243135;
   background-color: white;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 0.9rem;
 }
 .qty-display {
@@ -48,7 +47,7 @@
   margin-right: 25px;
 }
 .navbar-brand  {
-  margin: 0;
-  height: 100px;
-  width: 100px;
+  margin: 2%;
+  height: 50px;
+  width: 50px;
 }

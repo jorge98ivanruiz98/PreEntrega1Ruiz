@@ -1,5 +1,5 @@
 import CartWidget from "./CartWidget";
-import LogoRuns from "../images/RunsLogo.png";
+import LogoRuns from "../images/RunsLogoWhite.png";
 
 function NavBar() {
   return (

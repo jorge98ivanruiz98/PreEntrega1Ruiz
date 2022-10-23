@@ -2,11 +2,17 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import { Component } from "react";
+import React, { useState } from "react";
 
 function App() {
+
+  const [Writhing, setWrithing] = useState('Hola mundo');
+
   switch (window.location.pathname) {
     case "/":
-      Component = <ItemListContainer greeting={"Seleccionaste Home"}></ItemListContainer>;
+      Component = (
+        <ItemListContainer greeting={"Seleccionaste Home"}></ItemListContainer>
+      );
       break;
     case "/Category":
       Component = (
@@ -37,7 +43,11 @@ function App() {
       );
       break;
     default:
-      Component = <ItemListContainer greeting={"No se encuentra lo que estás buscando"}></ItemListContainer>;
+      Component = (
+        <ItemListContainer
+          greeting={"No se encuentra lo que estás buscando"}
+        ></ItemListContainer>
+      );
       break;
   }
   return (
@@ -45,6 +55,7 @@ function App() {
       <header>
         <NavBar></NavBar>
         {Component}
+        <ItemListContainer greeting={Writhing}></ItemListContainer>
       </header>
     </div>
   );
