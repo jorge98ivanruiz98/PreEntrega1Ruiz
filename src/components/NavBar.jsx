@@ -1,28 +1,29 @@
 import CartWidget from "./CartWidget";
 import LogoRuns from "../images/RunsLogoWhite.png";
 
-function NavBar() {
+function NavBar({ setValorNuevo }) {
+
   return (
     <div>
       <nav className="nav">
-        <a href="/" className="navbar-brand">
+        <a onClick={() => setValorNuevo('Bienvenido a RunStore')} className="navbar-brand">
             <img src={LogoRuns} alt="/" />
         </a>
         <ul className="nav__list">
           <li className="active">
-            <a href="/Category">Categorías</a>
+            <a onClick={() => setValorNuevo('Estoy en categorias')}>Categorías</a>
           </li>
           <li className="active">
-            <a href="/Ofertas">Ofertas</a>
+            <a onClick={() => setValorNuevo('Estoy en Ofertas')}>Ofertas</a>
           </li>
           <li className="active">
-            <a href="/TiendasOficiales">Tiendas oficiales</a>
+            <a onClick={() => setValorNuevo('Estoy en tiendas oficiales')}>Tiendas oficiales</a>
           </li>
           <li className="active">
-            <a href="/Vender">Vender</a>
+            <a onClick={() => setValorNuevo('Estoy en Vender')}>Vender</a>
           </li>
         </ul>
-        <CartWidget></CartWidget>
+        <CartWidget/>
       </nav>
     </div>
   );
